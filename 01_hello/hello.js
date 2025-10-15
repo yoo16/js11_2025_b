@@ -11,3 +11,9 @@ document.title = "Hello JavaScript"
 // 1) clg を入力して console を選択
 
 console.log("コンソールで表示できるかな？")
+
+/**
+ * このコメントはマルチラインコメント
+ * 2行目のコメント
+ * 3行目のコメント
+ */
