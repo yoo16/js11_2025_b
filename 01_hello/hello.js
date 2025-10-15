@@ -5,3 +5,9 @@
 // 4) = を入力して文字を代入
 
 document.title = "Hello JavaScript"
+
+// コンソールにメッセージを表示
+// ES6 Code Snippets をインストールしている場合
+// 1) clg を入力して console を選択
+
+console.log("コンソールで表示できるかな？")
