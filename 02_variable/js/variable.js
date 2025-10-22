@@ -13,7 +13,7 @@ var price = 500
 var quantity = 3
 
 // TODO: 変数定義 割引価格「discount」
-var discount = 100
+var discount = -100
 
 // TODO: itemName に再代入
 itemName = "紅茶"
@@ -43,6 +43,7 @@ document.getElementById("quantity").innerHTML = quantity
 document.getElementById("discount").innerHTML = discount
 
 // TODO: 定数定義 税率「TAX_RATE」
+const TAX_RATE = 0.1
 
 // TODO: 税率をHTML表示
-document.getElementById("tax-rate").innerHTML
+document.getElementById("tax-rate").innerHTML = TAX_RATE
