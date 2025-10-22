@@ -31,16 +31,16 @@ console.log(itemName);
 console.log(price, quantity, discount);
 
 // TODO: 商品名をHTML表示
-document.getElementById("item-name").innerHTML
+document.getElementById("item-name").innerHTML = itemName
 
 // TODO: 価格をHTML表示
-document.getElementById("price").innerHTML
+document.getElementById("price").innerHTML = price
 
 // TODO: 個数をHTML表示
-document.getElementById("quantity").innerHTML
+document.getElementById("quantity").innerHTML = quantity
 
 // TODO: 割引をHTML表示
-document.getElementById("discount").innerHTML
+document.getElementById("discount").innerHTML = discount
 
 // TODO: 定数定義 税率「TAX_RATE」
 
