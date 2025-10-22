@@ -1,5 +1,10 @@
 // TODO: 変数定義 商品名「itemName」に代入
+// キャメルケース
 var itemName = "コーヒー"
+// スネークケース
+var item_name = "コーヒー"
+// パスカルケース
+var ItemName = "コーヒー"
 
 // TODO: 変数定義 価格「price」
 var price = 500
@@ -14,7 +19,11 @@ var discount = 100
 
 // TODO: 商品名をコンソール表示
 // clg
+// ブラウザのコンソールで確認
 console.log(itemName);
+// ブラウザの強制再読み込み方法
+// Windows: Ctrl + Shift + R, Ctrl + F5
+// Mac: Command + Shift + R
 
 // TODO: 価格, 個数, 割引
 
