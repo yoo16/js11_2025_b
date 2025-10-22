@@ -14,6 +14,7 @@ var discount = 100
 
 // TODO: 商品名をコンソール表示
 // clg
+console.log(itemName);
 
 // TODO: 価格, 個数, 割引
 
