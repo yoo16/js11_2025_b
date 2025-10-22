@@ -16,16 +16,19 @@ var quantity = 3
 var discount = 100
 
 // TODO: itemName に再代入
+itemName = "紅茶"
 
 // TODO: 商品名をコンソール表示
 // clg
 // ブラウザのコンソールで確認
 console.log(itemName);
+
 // ブラウザの強制再読み込み方法
 // Windows: Ctrl + Shift + R, Ctrl + F5
 // Mac: Command + Shift + R
 
 // TODO: 価格, 個数, 割引
+console.log(price, quantity, discount);
 
 // TODO: 商品名をHTML表示
 document.getElementById("item-name").innerHTML
