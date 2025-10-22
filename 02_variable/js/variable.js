@@ -1,10 +1,14 @@
-// TODO: 変数定義 商品名「itemName」
+// TODO: 変数定義 商品名「itemName」に代入
+var itemName = "コーヒー"
 
 // TODO: 変数定義 価格「price」
+var price = 500
 
 // TODO: 変数定義 個数「quantity」
+var quantity = 3
 
-// TODO: 変数定義 割引「discount」
+// TODO: 変数定義 割引価格「discount」
+var discount = 100
 
 // TODO: itemName に再代入
 
