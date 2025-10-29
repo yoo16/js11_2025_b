@@ -74,7 +74,7 @@ var orderCode = tableNo + "-" + orderNo
 
 // テンプレートリテラル
 // バッククォーテーション ` `　で囲む
-orderCode = `${tableNo}-${orderNo}`
+orderCode = `R${tableNo}-${orderNo}`
 
 // TODO: オーダーコード生成（テキスト連結） xx-xxxx 形式
 document.getElementById('order-code').innerHTML = orderCode;
