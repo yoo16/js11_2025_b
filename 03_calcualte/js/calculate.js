@@ -39,10 +39,13 @@ discount = isMember ? 100 : 0
 totalPrice = subTotalPrice - discount
 
 // TODO: 税抜き金額 = 合計金額 / (1 + 税率): taxWithoutPrice
+taxWithoutPrice = totalPrice / (1 + TAX_RATE)
 
 // TODO: 税抜き金額を四捨五入: toFixed()
+taxWithoutPrice = taxWithoutPrice.toFixed(0)
 
 // TODO: 税額 = 合計金額 - 税抜き金額: tax
+tax = totalPrice - taxWithoutPrice
 
 
 // HTML表示
