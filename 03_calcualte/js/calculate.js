@@ -17,6 +17,8 @@ var discount = 0;
 // TODO: 個数 quantity を増減
 
 // TODO: 小計金額計算: subTotalPrice
+// 価格 x 個数
+subTotalPrice = price * quantity
 
 // TODO: 三項演算子を使って割引額を設定: discount
 
