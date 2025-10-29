@@ -33,6 +33,7 @@ quantity += 3
 subTotalPrice = price * quantity
 
 // TODO: 三項演算子を使って割引額を設定: discount
+discount = isMember ? 100 : 0
 
 // TODO: 合計金額 = 小計金額 - 割引: totalPrice
 
