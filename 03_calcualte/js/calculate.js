@@ -60,13 +60,17 @@ document.getElementById('tax').innerHTML = `&yen;${tax}`;
 document.getElementById('tax-without-price').innerHTML = `&yen;${taxWithoutPrice}`;
 
 // オーダーコード
-// var tableNo = 3;
-// var orderNo = 20341;
-var tableNo = "3";
-var orderNo = "20341";
+// Number
+var tableNo = 3;
+var orderNo = 20341;
+
+// String
+// var tableNo = "3";
+// var orderNo = "20341";
 
 // TODO: オーダーコード生成（数値連結）※ 注意)文字列連結ではない
-var orderCode = tableNo + orderNo
+// var orderCode = tableNo + orderNo
+var orderCode = tableNo + "-" + orderNo
 
 // TODO: オーダーコード生成（テキスト連結） xx-xxxx 形式
 document.getElementById('order-code').innerHTML = orderCode;
