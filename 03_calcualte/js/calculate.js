@@ -23,6 +23,11 @@ quantity++
 quantity--
 // quantity = quantity - 1
 
+// 個数を3個増やす
+// quantity = quantity + 3
+quantity += 3
+
+
 // TODO: 小計金額計算: subTotalPrice
 // 価格 x 個数
 subTotalPrice = price * quantity
