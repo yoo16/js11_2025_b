@@ -19,6 +19,10 @@ var discount = 0;
 quantity++
 // quantity = quantity + 1
 
+// １減らす -> quantity = 2
+quantity--
+// quantity = quantity - 1
+
 // TODO: 小計金額計算: subTotalPrice
 // 価格 x 個数
 subTotalPrice = price * quantity
