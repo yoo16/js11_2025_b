@@ -46,9 +46,9 @@ function calculate(x) {
 }
 
 // TODO: calculate() に 8 を渡して結果を表示
-document.getElementById("calc1").textContent
+document.getElementById("calc1").textContent = calculate(8)
 // TODO: calculate() に 71 を渡して結果を表示
-document.getElementById("calc2").textContent
+document.getElementById("calc2").textContent = calculate(71)
 
 // ==============================
 // 無名関数
