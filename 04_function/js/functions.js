@@ -71,13 +71,19 @@ document.getElementById("hello1").textContent = hello1("東京 太郎");
 // アロー関数
 // ==============================
 // TODO: アロー関数 hello2 を定義
-// var hello2 = (name) => {
+// const hello2 = (name) => {
 //     var message = name + "さん、いらっしゃい";
 //     return message;
 // };
 
+// nfn を入力して、arrow function の自動補完を使う
+const hello2 = (name) => {
+    var message = name + "さん、いらっしゃい";
+    return message;
+}
+
 // TODO: hello2 を使って表示
-document.getElementById("hello2").textContent;
+document.getElementById("hello2").textContent = hello2("東京 太郎");
 
 // ==============================
 // onload
