@@ -11,11 +11,11 @@ document.getElementById("parseInt_output").textContent = number;
 
 // 数値でない: isNaN()
 // TODO: 文字列
-document.getElementById("isNaN_1").textContent
+document.getElementById("isNaN_1").textContent = isNaN("コーヒー")
 // TODO: 数値に変換可能な文字列
-document.getElementById("isNaN_2").textContent
+document.getElementById("isNaN_2").textContent = isNaN("0005")
 // TODO: 数値
-document.getElementById("isNaN_3").textContent
+document.getElementById("isNaN_3").textContent = isNaN(5)
 
 // Math
 let height = 169.5;
