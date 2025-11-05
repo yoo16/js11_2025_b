@@ -45,6 +45,11 @@ function calculate(x) {
     return result
 }
 
+// python の場合
+// def calculate(x):
+//     result = x ** 2
+//     return result
+
 // TODO: calculate() に 8 を渡して結果を表示
 document.getElementById("calc1").textContent = calculate(8)
 // TODO: calculate() に 71 を渡して結果を表示
