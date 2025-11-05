@@ -4,7 +4,7 @@
 let numberString = "0005";
 
 // TODO: 文字列を数値に変換: parseInt()
-let number = null;
+let number = parseInt(numberString)
 
 document.getElementById("parseInt_input").textContent = numberString;
 document.getElementById("parseInt_output").textContent = number;
