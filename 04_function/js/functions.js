@@ -56,13 +56,13 @@ document.getElementById("calc1").textContent = calculate(8)
 document.getElementById("calc2").textContent = calculate(71)
 
 // ==============================
-// 無名関数
+// 無名関数(Anonymous Function)
 // ==============================
 // TODO: 無名関数 hello1 を定義
-// var hello1 = function (name) {
-//     var message = name + "さん、いらっしゃい";
-//     return message;
-// };
+const hello1 = function (name) {
+    var message = name + "さん、いらっしゃい";
+    return message;
+};
 
 // TODO: hello1 を使って表示
 document.getElementById("hello1").textContent;
