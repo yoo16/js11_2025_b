@@ -65,7 +65,7 @@ const hello1 = function (name) {
 };
 
 // TODO: hello1 を使って表示
-document.getElementById("hello1").textContent;
+document.getElementById("hello1").textContent = hello1("東京 太郎");
 
 // ==============================
 // アロー関数
