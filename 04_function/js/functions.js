@@ -26,18 +26,24 @@ document.getElementById("math_ceil").textContent = Math.ceil(height)
 // TODO: 切り捨て: floor()
 document.getElementById("math_floor").textContent = Math.floor(height)
 // TODO: 最大値: max() : 1,5,10,3
-document.getElementById("math_max").textContent = Math.max(1,5,10,3)
+document.getElementById("math_max").textContent = Math.max(1, 5, 10, 3)
 // TODO: 最小値: min() : 1,5,10,3
-document.getElementById("math_min").textContent = Math.min(1,5,10,3)
+document.getElementById("math_min").textContent = Math.min(1, 5, 10, 3)
 
 let current = 0
 // TODO: 1秒毎にカウント: setInterval()
 document.getElementById("count").textContent = current
 
 // ==============================
-// ユーザ定義関数
+// ユーザ定義関数(User Defined Function)
 // ==============================
 // TODO: calculate() を定義: 引数 x の2乗を返す
+// fun を入力して、function statement の自動補完を使う
+function calculate(x) {
+    // x を2乗する (power)
+    let result = x ** 2
+    return result
+}
 
 // TODO: calculate() に 8 を渡して結果を表示
 document.getElementById("calc1").textContent
