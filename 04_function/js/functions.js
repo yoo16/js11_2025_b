@@ -89,7 +89,7 @@ document.getElementById("hello2").textContent = hello2("東京 太郎");
 // onload
 // ==============================
 // TODO: onload イベント: 「東京」「横浜」どちらが先に表示されるか確認
-
+// HTMLが読み込み完了したら、showTokyo() 実行
 window.onload = function () {
     showTokyo();
 };
