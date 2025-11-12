@@ -26,6 +26,7 @@ let money = 1000
 let result = null;
 
 // TODO: price が 500 と等しい
+result = (price == 500)
 addRow("price == 500", result)
 
 // TODO: price が 0 より小さい
