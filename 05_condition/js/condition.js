@@ -50,6 +50,7 @@ let message2 = ""
 
 // ife を入力して、if else statement の自動補完を使う
 price = 500
+money = 100
 if (price < 0) {
     message2 = "エラー"
 } else if (money >= price) {
