@@ -41,13 +41,24 @@ addRow("price > 500", result)
 result = (price >= 500)
 addRow("price >= 500", result)
 
-// TODO: If statement: money が price 以上 の時に "決済完了"
 
 // TODO: If Else: 
 let message2 = ""
 // 1. price が 0 未満 の時に "価格エラー"
 // 2. money が price 以上 の時に "決済完了"
 // 3. それ以外 の時に "残高不足"
+
+// ife を入力して、if else statement の自動補完を使う
+price = 500
+if (price < 0) {
+    message2 = "エラー"
+} else if (money >= price) {
+    message2 = "決済完了"
+} else {
+    message2 = "残高不足"
+}
+
+
 addRow("Else if:", message2)
 
 // switchゴミ曜日
