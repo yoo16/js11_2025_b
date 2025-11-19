@@ -73,7 +73,10 @@ function selectMethod(methodKey) {
             // 現金入力画面を表示: class="hidden" を削除
             cashArea.classList.remove("hidden");
             break;
-    
+        case "qr":
+            // QRコード画面を表示: class="hidden" を削除
+            qrArea.classList.remove("hidden");
+            break;
         default:
             break;
     }
