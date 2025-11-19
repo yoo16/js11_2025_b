@@ -71,13 +71,15 @@ let trash = ""
 // 2. 木曜日 の時に 燃えないゴミ
 // 3. それ以外 の時に 回収なし
 
-weekday = "月"
+weekday = "木"
 // sw と入力して、switch statement の自動補完を使う
 switch (weekday) {
     case "月":
         trash = "もえるごみ"
         break;
-
+    case "木":
+        trash = "もえないごみ"
+        break;
     default:
         trash = "なし"
         break;
