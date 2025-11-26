@@ -32,6 +32,11 @@ var num = 0;
 // wh と入力して、While Statement を選択
 // num が 10 以下だったらずっと繰り返し
 while (num <= 10) {
+    // 7 だったらループを終了
+    if (num == 7) {
+        break
+    }
+
     // 偶数を表示: ２で割った余りが 0 : even number
     if (num % 2 == 0) {
         console.log(num);
