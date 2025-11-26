@@ -10,9 +10,11 @@ let sum = 0;
 // for と入力して、For Loop を選択
 // 1 から 100 まで繰り返し
 for (let index = 1; index <= 100; index++) {
-
+    // 合計を計算
+    // 1 + 2 + 3 + ... + 100
+    // sum = sum + index;
+    sum += index;
 }
-
 
 // 合計を表示
 console.log(sum);
