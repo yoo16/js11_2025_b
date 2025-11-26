@@ -72,7 +72,12 @@ function calculateSaving() {
     // 現在の貯金額(currentSaving) が
     // 目標金額(savingTarget)に達するまで繰り返し
     while (currentSaving < savingTarget) {
-        
+        // 月利息 = 現在の貯金額 × (年利 / 12)
+        const monthly = currentSaving * (interestRate / 12)
+        // 貯蓄金額 = 貯蓄金額 + 月利息 + 月の積立額
+        currentSaving += monthly + annualDeposit
+        // 累計利息 = 累計利息 + 月利息
+        totalInterest += monthly
         // 月数をカウント
         month++
     }
