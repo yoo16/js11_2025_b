@@ -7,6 +7,11 @@
 let sum = 0;
 
 // TODO: for Loop : 合計を計算: sum = sum + index の複合演算
+// for と入力して、For Loop を選択
+// 1 から 100 まで繰り返し
+for (let index = 1; index <= 100; index++) {
+
+}
 
 
 // 合計を表示
