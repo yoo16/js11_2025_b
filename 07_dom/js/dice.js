@@ -72,8 +72,12 @@ const rollDice = () => {
     // animate-shake クラスを diceContainer に追加: classList.add()
 
     const timer = setInterval(() => {
+        // 1-6のランダムな数値を生成
         number = randomNumber(1, 6);
         // TODO: サイコロの目の表示更新
+        // diceContainer.innerHTML = number
+        // バッククォートで囲むとテンプレートリテラル
+        diceContainer.innerHTML = `<span class="text-7xl">${number}</span>`
 
         // TODO: diceImages 配列から、number 番目のSVG画像を取り出して表示: innerHTML
 
