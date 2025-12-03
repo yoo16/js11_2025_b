@@ -70,6 +70,8 @@ const rollDice = () => {
 
     // TODO: アニメーション開始
     // animate-shake クラスを diceContainer に追加: classList.add()
+    diceContainer.classList.add('animate-shake')
+    // <div class="animate-shake"></div>
 
     const timer = setInterval(() => {
         // 1-6のランダムな数値を生成
@@ -89,6 +91,7 @@ const rollDice = () => {
     setTimeout(() => {
         // アニメーション終了 & ボタン有効化
         // TODO: diceContainer から animate-shake クラスを削除: classList.remove()
+        diceContainer.classList.remove('animate-shake')
 
         btnRoll.disabled = false;
         btnRoll.classList.remove('invisible');
