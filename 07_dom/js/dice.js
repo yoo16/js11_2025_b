@@ -42,6 +42,8 @@ function randomNumber(min, max) {
 function showMessage(message) {
     // TODO: id=message の innerHTML に message を設定
     document.getElementById('message').innerHTML = message
+    // これだとHTMLタグが文字列として表示される
+    // document.getElementById('message').textContent = message
 }
 
 /**
