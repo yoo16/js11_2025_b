@@ -2,6 +2,10 @@
 // id=dice-container
 const diceContainer = document.getElementById('dice-container');
 const btnRoll = document.getElementById('btn-roll');
+// diceContainer の確認
+console.log(diceContainer);
+// btnRoll の確認
+console.log(btnRoll);
 
 // サイコロの目（数値はランダムに変更される）
 let number = 1;
