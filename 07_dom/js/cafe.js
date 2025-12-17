@@ -71,7 +71,9 @@ function switchBackground() {
     imageIndex = (imageIndex + 1) % images.length;
 
     // TODO: Imageオブジェクト作成 
-    let image = {}
+    let image = document.createElement('img')
+    // <img>
+    image.src = images[imageIndex]
 
     // TODO: Imageオブジェクトに配列 images の画像パス設定: image.src
     // images[imageIndex] を代入
