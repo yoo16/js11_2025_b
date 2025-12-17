@@ -81,15 +81,18 @@ function switchBackground() {
     // 画像がロードされたら実行
     image.onload = () => {
         // TODO: backgroundImage のフェードアウト: style.opacity = 0
+        backgroundImage.style.opacity = 0
 
         // フェードインで画像表示
         setTimeout(() => {
             copyElement.classList.add("text-white");
 
             // TODO: backgroundImageの src 更新
-            // images[imageIndex] を代入
+            // image.src を代入
+            backgroundImage.src = image.src
 
             // TODO: backgroundImage のフェードイン: style.opacity = 1
+            backgroundImage.style.opacity = 1
         }, fadeInTime);
     };
 }
