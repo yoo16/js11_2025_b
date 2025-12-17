@@ -29,14 +29,20 @@ function animationText(text) {
     let index = 0;
     function displayNextChar() {
         // TODO: spanタグ作成 createElement()
-        let span = {}
+        // doc と入力して、document を補完候補から選択
+        // .cre と入力して、createElement() を補完候補から選択
+        let span = document.createElement('span')
+        // <span></span>
+
         // spanタグに文字をいれる
-        // span.textContent = text
         // TODO: spanに、text の index番目の文字を設定
+        span.textContent = text[index]
+        // <span>日などの１文字</span>
 
         // TODO: class=fade-in を設定: classList.add()
 
         // TODO: copyElement に spanタグを追加: appendChild()
+        copyElement.appendChild(span)
 
         // 文字インデックスを増やす
         index++;
