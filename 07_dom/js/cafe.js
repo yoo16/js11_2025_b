@@ -73,10 +73,10 @@ function switchBackground() {
     // TODO: Imageオブジェクト作成 
     let image = document.createElement('img')
     // <img>
-    image.src = images[imageIndex]
 
     // TODO: Imageオブジェクトに配列 images の画像パス設定: image.src
-    // images[imageIndex] を代入
+    image.src = images[imageIndex]
+    // <img src="images/cafe-x.avif">
 
     // 画像がロードされたら実行
     image.onload = () => {
