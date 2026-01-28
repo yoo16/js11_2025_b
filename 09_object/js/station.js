@@ -25,7 +25,7 @@ furigana.textContent = currentStation.furigana
 // let station1_name = "東京"
 // let station1_furigana = "とうきょう"
 
-// 連想配列の配列
+// ディクショナリー（辞書型）
 let stations = [
     { name: "東京", furigana: "とうきょう", },
     { name: "有楽町", furigana: "ゆうらくちょう", },
@@ -34,11 +34,13 @@ let stations = [
 
 console.log(stations)
 
-// 現在の駅名表示
+// 現在の駅名表示: index = 1
 currentStation = stations[1]
 
 // TODO: 現在の駅名表示
 // TODO: 現在のふりがな表示
+current.textContent = currentStation.name
+furigana.textContent = currentStation.furigana
 
 // TODO:前の駅名表示: 配列を使って
 prev.innerHTML = ""
