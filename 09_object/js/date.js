@@ -9,8 +9,8 @@ function updateTime() {
     const timeElement = document.getElementById("time");
     const dateElement = document.getElementById("date");
 
-    // TODO: 現在の日時を取得
-    const now = {};
+    // TODO: Dateオブジェクトのインスタンス作成
+    const now = new Date();
 
     // TODO: 日時の値を取得
     const year = "";
