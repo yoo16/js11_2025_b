@@ -19,6 +19,10 @@ let currentStation = {
 current.textContent = currentStation.name
 furigana.textContent = currentStation.furigana
 
+// 好ましくない例
+// let station1_name = "東京"
+// let station1_furigana = "とうきょう"
+
 // 連想配列の配列
 let stations = [
     { name: "東京", furigana: "とうきょう", },
