@@ -13,14 +13,15 @@ function updateTime() {
     const now = new Date();
 
     // TODO: 日時の値を取得
-    const year = "";
-    const month = "";
-    const day = "";
+    const year = now.getFullYear();
+    // 月は0から始まるため+1
+    const month = now.getMonth() + 1; 
+    const day = now.getDate();
 
     // TODO: 時刻を取得し、padZero() でゼロパディング
-    const hours = "";
-    const minutes = "";
-    const seconds = "";
+    const hours = padZero(now.getHours());
+    const minutes = padZero(now.getMinutes());
+    const seconds = padZero(now.getSeconds());
 
 
     // 時刻のフォーマット HH:MM:SS
