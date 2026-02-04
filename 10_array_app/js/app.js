@@ -38,10 +38,12 @@ function updateStation() {
     // 次の駅のインデックス
     nextStationIndex = getNextStationIndex();
     // TODO: インデックスから駅名表示: nextButton
+    nextButton.textContent = stations[nextStationIndex].name
 
     // 前の駅のインデックス
     prevStationIndex = getPrevStationIndex();
     // TODO: インデックスから駅名表示: prevButton
+    prevButton.textContent = stations[prevStationIndex].name
 }
 
 /**
