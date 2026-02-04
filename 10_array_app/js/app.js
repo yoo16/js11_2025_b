@@ -13,16 +13,19 @@ let nextStationIndex = getNextStationIndex();
 let prevStationIndex = getPrevStationIndex();
 
 /**
- * updateStation(id)
+ * updateStation()
  * 駅看板表示
  */
 function updateStation() { 
     // 現在の駅
     // TODO: 配列「stations」から、現在のインデックス「currentStationIndex」で、駅（連想配列）を取得
+    const station = stations[currentStationIndex]
 
     // TODO: 現在の駅名表示
+    currentName.textContent = station.name
 
     // TODO: 現在の駅名（ふりがな）表示
+    currentFurigana.textContent = station.furigana
 
     // TODO: ハイライトを一旦全て外す: class="station"
     // document.querySelectorAll('.station').forEach(stationElement => {
