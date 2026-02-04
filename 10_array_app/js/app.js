@@ -47,7 +47,7 @@ function updateStation() {
  */
 function getStationIndexById(id) {
     //  TODO: 駅のID から インデックス取得
-    // return stations.findIndex(station => station.id === id);
+    return stations.findIndex((station) => station.id === id);
 }
 
 /**
