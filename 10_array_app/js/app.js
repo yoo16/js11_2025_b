@@ -16,7 +16,7 @@ let prevStationIndex = getPrevStationIndex();
  * updateStation(id)
  * 駅看板表示
  */
-function updateStation() {
+function updateStation() { 
     // 現在の駅
     // TODO: 配列「stations」から、現在のインデックス「currentStationIndex」で、駅（連想配列）を取得
 
