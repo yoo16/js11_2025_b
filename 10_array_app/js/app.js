@@ -28,12 +28,13 @@ function updateStation() {
     currentFurigana.textContent = station.furigana
 
     // TODO: ハイライトを一旦全て外す: class="station"
-    // document.querySelectorAll('.station').forEach(stationElement => {
-    //     stationElement.classList.remove('bg-green-700');
-    // });
+    document.querySelectorAll('.station').forEach(stationElement => {
+        stationElement.classList.remove('bg-green-700');
+    });
 
     // TODO: 駅名ハイライト: id="station-${station.id}"
-    // document.querySelector(`#station-${station.id}`).classList.add('bg-green-700');
+    // id=station-1,  station-2 ... だったら、class="bg-green-700" を追加
+    document.querySelector(`#station-${station.id}`).classList.add('bg-green-700');
 
     // 次の駅のインデックス
     nextStationIndex = getNextStationIndex();
