@@ -51,12 +51,14 @@ const changeMsg = document.querySelector('#change-msg span');
 
 // TODO: change イベントの処理を実装: addEventListener('change', function(event) {})
 // 選択された値を取得
-const selectedValue = "";
-
-if (selectedValue) {
-    changeMsg.textContent = selectedValue + '(change)';
-} else {
-    changeMsg.textContent = '未選択';
+function langeChangeHandler(event) {
+    // プルダウンで選択された値を取得: option タグのvalue属性
+    const selectedValue = event.target.value;
+    if (selectedValue) {
+        changeMsg.textContent = selectedValue + '(change)';
+    } else {
+        changeMsg.textContent = '未選択';
+    }
 }
 
 // 5. Submitイベント
