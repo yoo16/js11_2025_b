@@ -61,6 +61,9 @@ function langeChangeHandler(event) {
     }
 }
 
+selectLang.addEventListener('change', langeChangeHandler);
+
+
 // 5. Submitイベント
 // フォーム送信時にページがリロードされるのを防ぎ、カスタム処理を行う
 const sampleForm = document.getElementById('sample-form');
