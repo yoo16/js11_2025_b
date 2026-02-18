@@ -32,7 +32,9 @@ const mouseArea = document.getElementById('mouse-area');
 
 // TODO: mouseoverイベントの処理を実装: addEventListener('mouseover', function(event) {})
 mouseArea.addEventListener('mouseover', (event) => {
-    mouseArea.textContent = 'mouseover';
+    const x = event.clientX; // マウスのX座標
+    const y = event.clientY; // マウスのY座標
+    mouseArea.textContent = `mouseover (${x}, ${y})`;
     mouseArea.classList.replace('bg-gray-200', 'bg-yellow-300');
 })
 
