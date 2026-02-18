@@ -72,7 +72,7 @@ const formMsg = document.getElementById('form-msg');
 // TODO: submitイベントの処理を実装: addEventListener('submit', function(event) {
 sampleForm.addEventListener('submit', (event) => {
     // ページのリロード（既定の動作）をキャンセル
-    // event.preventDefault();
+    event.preventDefault();
 
     // 名前の取得
     const name = document.getElementById('form-name').value;
@@ -81,4 +81,7 @@ sampleForm.addEventListener('submit', (event) => {
 
     // 入力をクリア
     sampleForm.reset();
+
+    // サーバに送信する処理（例: fetch API）をここに追加可能
+    // await fetch('https://example.com/api/submit', {});
 })
