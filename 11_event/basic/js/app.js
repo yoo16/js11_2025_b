@@ -1,139 +1,67 @@
-// グローバル変数: ショッピングカートの情報を読み込み
-let cart = fetchCart();
-// DOM要素の取得
-const grid = document.getElementById('product-grid');
-const cartList = document.getElementById('cart-items');
-const count = document.getElementById('cart-count');
-const total = document.getElementById('cart-total');
-const cartDrawer = document.getElementById('cart-drawer');
+// 1. Clickイベント
+// ボタンをクリックした時にテキストを変更する
+const btnClick = document.getElementById('btn-click');
+const clickMsg = document.getElementById('click-msg');
 
-// 初期化処理: HTMLの読み込みが完了したら商品を表示し、カートUIを更新
-document.addEventListener('DOMContentLoaded', async () => {
-    // await fetchProducts(); // API で取得する場合に使用
-    renderProducts();     // 商品表示
-    updateCartUI();       // カートUI更新
+btnClick.addEventListener('click', () => {
+    clickMsg.textContent = 'ボタンクリック！(click)';
+    clickMsg.classList.add('text-blue-600', 'font-bold');
 });
 
-// 商品一覧の描画
-function renderProducts() {
-    // products 配列をループしてHTMLを生成し、grid要素に挿入
-    grid.innerHTML = products.map(p => `
-        <div class="group bg-white p-4 rounded-xl shadow-sm">
-            <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
-                <img src="${p.image}" class="h-full w-full object-cover group-hover:opacity-75">
-            </div>
-            <div class="mt-4 flex justify-between">
-                <div>
-                    <h3 class="text-sm font-medium text-gray-700">${p.name}</h3>
-                    <p class="text-sm font-bold mt-1">¥${p.price.toLocaleString()}</p>
-                </div>
-                <button class="cart-btn bg-gray-100 p-2 rounded-full hover:bg-gray-200" data-id="${p.id}">＋</button>
-            </div>
-        </div>
-    `).join('');
-    // class=cart-btn の要素をすべて取得
-    const cartButtons = document.querySelectorAll('.cart-btn');
+// 2. Inputイベント
+// 入力フォームに文字を打つたびにリアルタイムで反映する
+const inputText = document.getElementById('input-text');
+const inputMsg = document.querySelector('#input-msg span');
 
-    // カートボタンのクリックイベント
-    cartButtons.forEach(btn => {
-        // クリックイベントリスナーを追加
-        btn.addEventListener('click', (event) => {
-            // HTMLの data-id 属性から値を取り出す
-            const id = Number(event.target.dataset.id);
-            addToCart(id);
-        });
-    });
-}
+inputText.addEventListener('input', (event) => {
+    // event.target.value で入力された値を取得できる
+    inputMsg.textContent = event.target.value;
+});
 
-// カートに追加
-function addToCart(id) {
-    console.log(id)
-    // idで商品を特定
-    const product = products.find(p => p.id === id);
-    if (!product) return;
+// 3. Mouseover/Mouseoutイベント
+// マウスが要素に乗った時、離れた時に色を変える
+const mouseArea = document.getElementById('mouse-area');
 
-    // すでにカートにあるか確認
-    const item = cart.find(c => c.id === id);
+mouseArea.addEventListener('mouseover', () => {
+    mouseArea.textContent = 'mouseover';
+    mouseArea.classList.replace('bg-gray-200', 'bg-yellow-300');
+});
 
-    if (item) {
-        // すでにカートに存在する場合は数量を増やす
-        item.quantity++;
+mouseArea.addEventListener('mouseout', () => {
+    mouseArea.textContent = 'mouseout';
+    mouseArea.classList.replace('bg-yellow-300', 'bg-gray-200');
+});
+
+// 4. Changeイベント
+// セレクトボックスの選択が変更された時に実行
+const selectLang = document.getElementById('select-lang');
+const changeMsg = document.querySelector('#change-msg span');
+
+selectLang.addEventListener('change', (event) => {
+    // 選択された値を取得
+    const selectedValue = event.target.value;
+
+    if (selectedValue) {
+        changeMsg.textContent = selectedValue + '(change)';
     } else {
-        // カートに存在しない場合は新規追加
-        cart.push({ ...product, quantity: 1 });
+        changeMsg.textContent = '未選択';
     }
-    // カート保存
-    saveCart();
-}
+});
 
-// カートから削除
-function removeFromCart(id) {
-    // IDで商品を特定して削除
-    cart = cart.filter(item => item.id !== id);
-    // カート保存
-    saveCart();
-}
+// 5. Submitイベント
+// フォーム送信時にページがリロードされるのを防ぎ、カスタム処理を行う
+const sampleForm = document.getElementById('sample-form');
+const formMsg = document.getElementById('form-msg');
 
-// UI更新
-function updateCartUI() {
-    console.log(cart)
-    // カート内商品数表示
-    count.innerText = totalCount();
+sampleForm.addEventListener('submit', (event) => {
+    // ページのリロード（既定の動作）をキャンセル
+    event.preventDefault();
 
-    // 合計金額計算
-    const sum = calculateTotal();
-    total.innerText = `¥${sum.toLocaleString()}`;
+    // 名前の取得
+    const name = document.getElementById('form-name').value;
+    formMsg.textContent = `${name}さん、送信ありがとうございます！`;
+    formMsg.classList.remove('hidden');
 
-    // カート内商品リスト表示
-    cartList.innerHTML = cart.map(item => `
-        <div class="flex justify-between items-center border-b pb-4">
-            <div class="flex items-center gap-4">
-                <img src="${item.image}" class="w-16 h-16 object-cover rounded">
-                <div>
-                    <h4 class="text-sm font-bold">${item.name}</h4>
-                    <p class="text-xs text-gray-500">¥${item.price.toLocaleString()} &times; ${item.quantity}</p>
-                </div>
-            </div>
-            <button onclick="removeFromCart(${item.id})" class="text-white bg-red-500 text-xs px-2 py-1 rounded">削除</button>
-        </div>
-    `).join('');
-}
-
-function fetchCart() {
-    return JSON.parse(localStorage.getItem('shop_cart')) || [];
-}
-
-// カート内商品数計算
-function totalCount() {
-    return cart.reduce((sum, item) => sum + item.quantity, 0);
-}
-
-// 合計金額計算
-function calculateTotal() {
-    return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-}
-
-// カート保存
-function saveCart() {
-    // LocalStorageに保存
-    localStorage.setItem('shop_cart', JSON.stringify(cart));
-    updateCartUI();
-}
-
-// カート表示切替
-function toggleCart() {
-    // classListを使って表示/非表示を切り替え
-    cartDrawer.classList.toggle('translate-x-full');
-}
-
-// API でJSONデータの読み込み
-async function fetchProducts() {
-    try {
-        const response = await fetch('api/products.json');
-        if (!response.ok) throw new Error('Network response was not ok');
-        products = await response.json();
-    } catch (error) {
-        console.error('Fetch error:', error);
-        grid.innerHTML = '<p class="text-center py-10">商品データの読み込みに失敗しました。</p>';
-    }
-}
+    // 入力をクリア
+    sampleForm.reset();
+});
